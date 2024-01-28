@@ -14,7 +14,7 @@
 
           SELECT c.login, COUNT(o.id) AS "deliveryCount" 
           FROM "Couriers" AS c 
-          LEFT JOIN "Orders" AS o ON c.id = o."courierId" 
+          INNER JOIN "Orders" AS o ON c.id = o."courierId" 
           WHERE o."inDelivery" = true 
           GROUP BY c.login;
 
@@ -45,6 +45,6 @@
 
 https://1202b1a9-18d1-4b1d-8d87-9db78e795c78.serverhub.praktikum-services.ru/
 
-5.2 В файле sendor_stand_request нажать кнопку Run 
+5.2 В файле sender_stand_request нажать кнопку Run 
 
 ###### Спасибо за внимание)
